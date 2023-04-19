@@ -24,7 +24,6 @@ public class Calculator {
         return sum(y) + minus(y) + multiply(y) + divide(y);
     }
 
-
     public static void main(String[] args) {
         int a = 2;
         int result = Calculator.minus(a);
@@ -35,6 +34,4 @@ public class Calculator {
         result = calculator.sumAllOperation(a);
         System.out.println(result);
     }
-
-
 }

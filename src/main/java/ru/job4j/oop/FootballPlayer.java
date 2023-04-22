@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class FootballPlayer extends Sportsman{
+public class FootballPlayer extends Sportsman {
 
     @Override
     void run() {

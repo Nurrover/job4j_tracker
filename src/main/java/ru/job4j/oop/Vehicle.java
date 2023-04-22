@@ -9,6 +9,7 @@ public abstract class Vehicle {
     private int maxSpeed;
 
     public abstract void accelerate();
+
     public abstract void steer();
 
     public void brake() {

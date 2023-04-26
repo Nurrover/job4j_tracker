@@ -12,7 +12,6 @@ public class Shop {
         return index;
     }
 
-
     public static void main(String[] args) {
         Product[] products = new Product[5];
         products[0] = new Product("Milk", 10);

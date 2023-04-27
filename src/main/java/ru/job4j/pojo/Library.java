@@ -17,7 +17,7 @@ public class Library {
         list[0] = reader;
         list[3] = cleanCode;
         for (Book book : list) {
-            if (book.getName().equals("Clean code")) {
+            if ("Clean code".equals(book.getName())) {
                 System.out.println(book.getName() + " - " + book.getSheet());
             }
         }

@@ -1,11 +1,12 @@
 package ru.job4j.oop;
 
-public class Car {
+public class Car extends Transport {
 
     private String brand;
     private String model;
 
     public Car(String brand, String model) {
+        super();
         this.brand = brand;
         this.model = model;
     }

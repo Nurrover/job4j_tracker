@@ -5,17 +5,39 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class StartUITest {
     @Test
-    public void whenAddItem() {
-
+    public void whenCreateItem() {
+        Input in = new StubInput(
+                new String[] {"0", "Item name", "1"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = {new CreateAction(), new ExitProgramAction()};
+        new StartUI().init(in, tracker, actions);
+        assertThat(tracker.findAll()[0].getName()).isEqualTo("Item name");
     }
 
     @Test
-    public void whenEditItem() {
-
+    public void whenReplaceItem() {
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("Replaced item"));
+        String replacedName = "New item name";
+        Input in = new StubInput(
+                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
+        );
+        UserAction[] actions = {new EditAction(), new ExitProgramAction()};
+        new StartUI().init(in, tracker, actions);
+        assertThat(tracker.findById(item.getId()).getName()).isEqualTo(replacedName);
     }
 
     @Test
-    public void whenDeleteItem() {
-
+    public void whenDeleteAction() {
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("New item"));
+        Input in = new StubInput(
+                new String[] {"0", String.valueOf(item.getId()), "1"}
+        );
+        UserAction[] actions = {new DeleteAction(), new ExitProgramAction()};
+        new StartUI().init(in, tracker, actions);
+        assertThat(tracker.findById(item.getId())).isNull();
     }
+
 }

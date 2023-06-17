@@ -16,6 +16,24 @@ public class FindEl {
         return rsl;
     }
 
+    public static void sent(String values, String[] abuses) throws ElementAbuseException {
+        for (String element : abuses) {
+            if (values.equals(element)) {
+                throw new ElementAbuseException("Contains a forbidden word");
+            }
+        }
+    }
+
+    public static void process(String[] values, String key, String[] abuses) {
+        try {
+            if (indexOf(values, key) != -1) {
+                sent(key, abuses);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         String[] value = {"n", "u", "k", "s"};
         String key = "j";

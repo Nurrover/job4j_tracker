@@ -2,7 +2,6 @@ package ru.job4j.ex;
 
 public class FactRec {
     public static int calc(int n) {
-        System.out.println(n);
         return  n == 1 || n == 0 ? 1 : calc(n - 1) * n;
     }
 

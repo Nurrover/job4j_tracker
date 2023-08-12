@@ -8,8 +8,8 @@ public class Tracker {
     private int ids = 1;
 
     public Item add(Item item) {
+        item.setId(ids++);
         items.add(item);
-        ids++;
         return item;
     }
 
@@ -34,9 +34,9 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-        for (Item item : items) {
-            if (item.getId() == id) {
-                rsl = id;
+        for (int index = 0; index < items.size(); index++) {
+            if (items.get(index).getId() == id) {
+                rsl = index;
                 break;
             }
         }

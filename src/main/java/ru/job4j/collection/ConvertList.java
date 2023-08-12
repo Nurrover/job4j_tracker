@@ -11,7 +11,6 @@ public class ConvertList {
                 rsl.add(cell);
             }
         }
-
         return rsl;
     }
 }

@@ -38,10 +38,9 @@ public class AnalyzeByMap {
         }
 
         List<Label> list = new ArrayList<>();
-        for (Pupil pupil : pupils) {
-            for (Subject subject : pupil.subjects()) {
-                list.add(new Label(subject.name(), linkedHashMap.get(subject.name()) / pupils.size()));
-            }
+        for (Subject subject : pupils.get(0).subjects()) {
+            list.add(new Label(subject.name(), linkedHashMap.get(subject.name()) / pupils.size()));
+
         }
 
         return list;

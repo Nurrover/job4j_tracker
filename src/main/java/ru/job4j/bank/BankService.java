@@ -5,6 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Класс описывает простейшую версию банковской системы, у которого есть
+ * пользователи и их счита
+ * @author Safarov Nurlan
+ * @version 1.0
+ */
 public class BankService {
     /**
      * Хранение пользователей системы с привязанными к ним счетами

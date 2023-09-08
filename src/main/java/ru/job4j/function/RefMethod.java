@@ -12,7 +12,6 @@ public class RefMethod {
         );
         Consumer<String> out = RefMethod::cutOut;
         names.forEach(out);
-
     }
 
     public static void cutOut(String value) {

@@ -13,13 +13,10 @@ public class JobSorter {
                 new Job("X task", 0)
         );
         System.out.println(jobs);
-        jobs.sort(new JobDescByName().thenComparing(new JobDescByPriority()));
-        System.out.println(jobs);
-
-        Comparator<Job> comb = new JobDescByNameLn()
-                .thenComparing(new SortByNameJob())
-                .thenComparing(new JobDescByPriority());
-        jobs.sort(comb);
+        Comparator<Job> comparatorName = Comparator.comparing(Job::getName);
+        Comparator<Job> comparatorPriority = Comparator.comparingInt(Job::getPriority);
+        Comparator<Job> combine = comparatorName.thenComparing(comparatorPriority);
+        jobs.sort(combine);
         System.out.println(jobs);
     }
 }

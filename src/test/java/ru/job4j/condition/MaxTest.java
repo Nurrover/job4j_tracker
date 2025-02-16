@@ -42,6 +42,7 @@ class MaxTest {
         int out = Max.max(left, middle, right);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void whenMinus10And0AndMinus5ThenMax0() {
         int left = -10;
@@ -51,6 +52,7 @@ class MaxTest {
         int out = Max.max(left, middle, right);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when45AndMinus12And0ThenMax45() {
         int left = 45;
@@ -60,6 +62,7 @@ class MaxTest {
         int out = Max.max(left, middle, right);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when3And3And3ThenMax3() {
         int left = 3;
@@ -69,6 +72,7 @@ class MaxTest {
         int out = Max.max(left, middle, right);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when100And2And56And304ThenMax304() {
         int first = 100;
@@ -79,6 +83,7 @@ class MaxTest {
         int out = Max.max(first, second, third, four);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when19And24And102And100ThenMax102() {
         int first = -19;
@@ -89,6 +94,7 @@ class MaxTest {
         int out = Max.max(first, second, third, four);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void whenMinus15And0AndMinus9AndMinus2ThenMax0() {
         int first = -15;
@@ -99,6 +105,7 @@ class MaxTest {
         int out = Max.max(first, second, third, four);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when54AndMinus21And0And24ThenMax54() {
         int first = 54;
@@ -109,6 +116,7 @@ class MaxTest {
         int out = Max.max(first, second, third, four);
         assertThat(out).isEqualTo(expected);
     }
+
     @Test
     public void when1And1And1And1ThenMax1() {
         int first = 1;
